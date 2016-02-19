@@ -1,0 +1,1 @@
+cat frankenstein.txt | grep -so . | sort | uniq -c | sort | tail -n 1
