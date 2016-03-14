@@ -21,8 +21,16 @@ for row in mat:
 #
 # Now lets debug it with our shiny new python toy.
 #
+
+
+
+
 # Un-comment the line below to start the trace.
 # ipdb.set_trace()
+
+
+
+
 #
 # This is just like gdb!  Type 'h' to see the commands.
 #
@@ -64,8 +72,11 @@ for row in mat:
 #
 for x in range(N):
     for y in range(N):
+        if (x > y):
+            continue
+        tmp = mat[x][y]
         mat[x][y] = mat[y][x]
-        mat[y][x] = mat[x][y]
+        mat[y][x] = tmp
 
 # Print the results.
 print("------------------")
